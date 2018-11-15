@@ -1,4 +1,7 @@
 .wrapper-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     max-width: 1400px;
 }
 
@@ -9,6 +12,7 @@
     flex-direction: column;
     justify-content: center;
     height: 285px;
+    width: 100%;
     p,
     h2 {
         color: #ffffff;
