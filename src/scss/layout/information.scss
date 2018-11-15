@@ -1,0 +1,19 @@
+.wrapper-information {
+    max-width: 1400px;
+}
+
+.information {
+    background-image: url('/src/images/information-bg.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 285px;
+    p,
+    h2 {
+        color: #ffffff;
+    }
+    h2 {
+        text-transform: uppercase;
+    }
+}

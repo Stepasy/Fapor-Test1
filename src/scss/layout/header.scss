@@ -1,0 +1,30 @@
+header {
+    align-items: center;
+    background-color: #24282f;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100px;
+    a {
+        color: #e2e2e3;
+        font-family: 'Cabin';
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .header-logo {
+        display: flex;
+        flex-direction: row;
+        &-text {
+            margin-left: 30px;
+            text-transform: uppercase;
+        }
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        a {
+            margin-left: 65px;
+            text-transform: uppercase;
+        }
+    }
+}
