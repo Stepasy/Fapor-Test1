@@ -1,40 +1,41 @@
-header {
+.header-wrapper{
     align-items: center;
-    background-color: #24282f;
+    background-color: #2b2f36;
     display: flex;
     justify-content: center;
-    height: 100px;
+    text-transform: uppercase;
     width: 100%;
-    .header-wrapper{
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        max-width: 1400px;
-    }
-    a {
-        color: #e2e2e3;
-        font-family: 'Cabin';
-        font-size: 14px;
-        font-weight: 600;
-    }
-    .header-logo {
-        display: flex;
-        flex-direction: row;
-        margin-top: 7px;
-        text-align: left;
-        &-text {
-            margin-left: 30px;
-            text-transform: uppercase;
-        }
-    }
-    nav {
-        display: flex;
-        flex-direction: row;
-        text-align: right;
-        a {
-            margin-left: 65px;
-            text-transform: uppercase;
-        }
-    }
+    height: 100px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    color: #ffffff;
 }
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 1400px;
+    a{
+        color: #fff;
+    }
+    &-logo{
+        font-family: "Cabin";
+        font-weight: bold;
+        letter-spacing: 2px;
+        line-height: 24px;
+        font-size: 26px;
+        display: flex;
+        &-text{
+            margin-left: 30px;
+        }
+    }
+    &-nav{
+        a{
+            margin-left: 65px;
+        }
+        a:hover{
+            border-bottom: 3px solid #b5a263;
+            padding-bottom: 41px;
+        }
+    }
+
+    }
