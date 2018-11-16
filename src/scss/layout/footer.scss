@@ -1,0 +1,22 @@
+.footer-wrapper{
+    align-items: center;
+    background-color: #24282f;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 66px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1130px;
+    p{
+        color: #fff;
+    }
+    .socials{
+        display: flex;
+        flex-direction: row;
+    }
+}
