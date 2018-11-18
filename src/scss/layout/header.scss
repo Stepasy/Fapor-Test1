@@ -1,4 +1,4 @@
-.header-wrapper{
+.header-wrapper {
     align-items: center;
     background-color: #2b2f36;
     display: flex;
@@ -8,34 +8,40 @@
     height: 100px;
     letter-spacing: 1px;
     line-height: 24px;
-    color: #ffffff;
+    color: #fff;
 }
-.header{
+
+.header {
     display: flex;
     justify-content: space-between;
     width: 1400px;
-    a{
+    flex-wrap: wrap;
+    a {
         color: #fff;
     }
-    &-logo{
+    &-logo {
         font-family: "Cabin";
         font-weight: bold;
         letter-spacing: 2px;
         line-height: 24px;
         font-size: 26px;
         display: flex;
-        &-text{
+        img {
+            height: 23px;
+            width: 25px;
+            max-width: 25px;
+        }
+        &-text {
             margin-left: 30px;
         }
     }
-    &-nav{
-        a{
+    &-nav {
+        a {
             margin-left: 65px;
         }
-        a:hover{
+        a:hover {
             border-bottom: 3px solid #b5a263;
             padding-bottom: 41px;
         }
     }
-
 }
