@@ -1,24 +1,21 @@
-.reviews-wrapper{
+.reviews-wrapper {
     background-color: #f7f7f7;
 }
 
-.reviews{
+.reviews {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     max-width: 1120px;
     height: 600px;
-    .review{
+    .review {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        .testimotional{
-
+        .testimotional {
             max-width: 860px;
-
         }
     }
-
 }

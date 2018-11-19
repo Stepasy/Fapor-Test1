@@ -1,4 +1,4 @@
-.top-wrapper {
+.information-wrapper {
     position: relative;
     align-items: center;
     display: flex;
@@ -51,7 +51,7 @@
 }
 
 @media (max-width: 1415px) {
-    .information{
-        padding: 0% 5% 0% 5%;
+    .information {
+        padding: 0% 5%;
     }
 }
