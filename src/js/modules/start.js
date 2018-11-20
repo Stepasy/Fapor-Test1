@@ -9,13 +9,7 @@ $(document).ready(function() {
         $(".mobile-navbar-wrapper").slideToggle();
     });
     $('.owl-carousel').owlCarousel({
-        items:1,
+        items: 1,
+        loop: true
     });
 });
-
-$('#subscribe').blur(function() {
-    var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,6}\.)?[a-z]{2,6}$/i;
-    if($(this).val() && !pattern.test($(this).val())) {
-      $(this).focus();
-    }
-  });
