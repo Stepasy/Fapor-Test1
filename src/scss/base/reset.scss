@@ -12,6 +12,14 @@ html {
 *:after {
     box-sizing: inherit;
 }
+   
+p,
+img,
+h2,
+a {
+    padding: 0;
+    margin: 0;
+}
 
 a {
     text-decoration: none;

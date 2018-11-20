@@ -1,16 +1,18 @@
-.bottom-wrapper {
+.managment-wrapper {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    p,
-    img,
-    h2,
-    a {
-        padding: 0;
-        margin: 0;
-    }
-    .managment-header {
+    
+}
+
+.managment {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1120px;
+    min-height: 730px;
+    &-header {
         font-size: 24px;
         letter-spacing: 2px;
         line-height: 20px;
@@ -20,36 +22,10 @@
         text-transform: uppercase;
         padding: 160px 0px 35px 0px;
     }
-}
-
-.managment {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    max-width: 1120px;
-    min-height: 730px;
     .line {
         content: '';
         width: 77px;
         border-bottom: 2px solid #b5a263;
-    }
-    .manager-info {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: auto;
-        padding: 0px 35px;
-        &-data-name {
-            font-size: 16px;
-            color: #232323;
-            font-family: "Raleway";
-            text-transform: uppercase;
-        }
-        &-data-position {
-            font-size: 14px;
-            color: #b5a263;
-            font-family: "Open Sans";
-        }
     }
     .managers {
         display: flex;
@@ -63,6 +39,24 @@
         }
         .manager {
             padding-top: 30px;
+            &-info {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: auto;
+                padding: 0px 35px;
+                &-data-name {
+                    font-size: 16px;
+                    color: #232323;
+                    font-family: "Raleway";
+                    text-transform: uppercase;
+                }
+                &-data-position {
+                    font-size: 14px;
+                    color: #b5a263;
+                    font-family: "Open Sans";
+                }
+            }
         }
     }
     .loader {
@@ -77,6 +71,11 @@
         font-family: "Open Sans";
         text-transform: uppercase;
     }
+    .loader:hover{
+        background-color: #24282f;
+        transform: 0.5s;
+        color: #fff;
+    }
 }
 
 @media (min-width: 741px) and (max-width: 1113px) {
@@ -87,11 +86,23 @@
     }
 }
 
-@media (max-width: 741px) {
+@media (max-width: 760px) {
+    .managment {
+        .managers {
+            flex-direction: column;
+            img {
+                padding: 5%;
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
     .managment {
         .managers {
             img {
-                padding: 5%;
+                height: auto;
+                width: 90%;    
             }
         }
     }

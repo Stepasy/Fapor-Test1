@@ -12,14 +12,18 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 1130px;
+    width: 1120px;
     flex-wrap: wrap;
 
     p{
-        color: #fff;
+        font-size: 12px;
+        letter-spacing: 1px;
+        color: #6e7279;
+        font-family: "Open Sans";
     }
     .socials{
         display: flex;
         flex-direction: row;
+        
     }
 }
