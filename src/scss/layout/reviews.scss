@@ -89,3 +89,9 @@
         align-self: center;
     }
 }
+
+@media (max-width: 768px) {
+    .reviews-header{
+        padding-top: 20px;
+    }
+}

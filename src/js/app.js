@@ -3,4 +3,5 @@
 // This file will be compiled into app.js and will not be minified.
 // Feel free with using ES6 here.
 
-import './modules/start';
+import './modules/mobile-menu';
+import './modules/owl';

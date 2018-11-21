@@ -7,6 +7,10 @@
 }
 
 .managment {
+    p{
+        margin: 0;
+        padding: 0;
+    }
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -43,19 +47,32 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                width: auto;
+                width: inherit;
                 padding: 0px 35px;
                 &-data-name {
                     font-size: 16px;
                     color: #232323;
                     font-family: "Raleway";
                     text-transform: uppercase;
+                    margin-bottom: 10px;
                 }
                 &-data-position {
                     font-size: 14px;
                     color: #b5a263;
                     font-family: "Open Sans";
                 }
+            }
+            .fab{
+                color: #fff;
+                width: 34px;
+                height: 34px;
+                border-radius: 17px;
+                background-color: #dedede;
+                text-align: center;
+                padding-top: 10px;
+            }
+            .fab:hover{
+                background-color: #b5a263;
             }
         }
     }
@@ -73,7 +90,6 @@
     }
     .loader:hover{
         background-color: #24282f;
-        transform: 0.5s;
         color: #fff;
     }
 }
