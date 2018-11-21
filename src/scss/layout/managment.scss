@@ -88,6 +88,9 @@
 
 @media (max-width: 760px) {
     .managment {
+        &-header{
+            padding-top: 80px;
+        }
         .managers {
             flex-direction: column;
             img {
@@ -98,12 +101,10 @@
 }
 
 @media (max-width: 350px) {
-    .managment {
         .managers {
             img {
                 height: auto;
                 width: 90%;    
             }
         }
-    }
 }
