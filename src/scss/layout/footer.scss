@@ -12,6 +12,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-content: center;
     width: 1120px;
     flex-wrap: wrap;
 
@@ -43,6 +44,15 @@ footer{
 
 @media (max-width: 1415px) {
     footer {
-        padding: 0 5%;
+        padding: 0% 5%;
+        
+    }
+}
+
+@media (max-width: 450px){
+    footer {
+        padding: 3% 5%;
+        flex-direction: column;
+        align-items: center;
     }
 }
