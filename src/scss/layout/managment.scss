@@ -6,7 +6,7 @@
 }
 
 .managment {
-    p{
+    p {
         margin: 0;
         padding: 0;
     }
@@ -15,13 +15,27 @@
     flex-direction: column;
     max-width: 1120px;
     min-height: 730px;
+    @media (min-width: 741px) and (max-width: 1113px) {
+        justify-content: center;
+        align-content: center;
+        flex-wrap: nowrap;
+    }
+    @media (max-width: 760px) {
+        &-header {
+            padding-top: 80px;
+        }
+        .managers {
+            flex-direction: column;
+            img {
+                padding: 5%;
+            }
+        }
+    }
     &-header {
-        font-size: 24px;
+        font: bold 24px "Raleway";
         letter-spacing: 2px;
         line-height: 20px;
         color: #24282f;
-        font-family: "Raleway";
-        font-weight: bold;
         text-transform: uppercase;
         padding: 160px 0 35px 0;
     }
@@ -34,6 +48,12 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        @media (max-width: 350px) {
+            img {
+                height: auto;
+                width: 90%;
+            }
+        }
         img {
             padding: 30px;
             width: 311px;
@@ -49,19 +69,17 @@
                 width: inherit;
                 padding: 0px 35px;
                 &-data-name {
-                    font-size: 16px;
+                    font: normal 16px "Raleway";
                     color: #232323;
-                    font-family: "Raleway";
                     text-transform: uppercase;
                     margin-bottom: 10px;
                 }
                 &-data-position {
-                    font-size: 14px;
+                    font: normal 14px "open sans";
                     color: #b5a263;
-                    font-family: "Open Sans";
                 }
             }
-            .fab{
+            .fab {
                 color: #fff;
                 width: 34px;
                 height: 34px;
@@ -70,7 +88,7 @@
                 text-align: center;
                 padding-top: 10px;
             }
-            .fab:hover{
+            .fab:hover {
                 background-color: #b5a263;
             }
         }
@@ -80,46 +98,14 @@
         border-radius: 45px;
         margin: 50px 0 30px 0;
         padding: 18px 45px;
-        font-size: 16px;
+        font: normal 16px "open sans";
         letter-spacing: 1px;
         line-height: 24px;
         color: #24282f;
-        font-family: "Open Sans";
         text-transform: uppercase;
     }
-    .loader:hover{
+    .loader:hover {
         background-color: #24282f;
         color: #fff;
     }
-}
-
-@media (min-width: 741px) and (max-width: 1113px) {
-    .managment {
-        justify-content: center;
-        align-content: center;
-        flex-wrap: nowrap;
-    }
-}
-
-@media (max-width: 760px) {
-    .managment {
-        &-header{
-            padding-top: 80px;
-        }
-        .managers {
-            flex-direction: column;
-            img {
-                padding: 5%;
-            }
-        }
-    }
-}
-
-@media (max-width: 350px) {
-        .managers {
-            img {
-                height: auto;
-                width: 90%;    
-            }
-        }
 }

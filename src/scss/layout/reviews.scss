@@ -15,12 +15,13 @@
     min-height: 600px;
     flex-wrap: wrap;
     &-header {
-        font-size: 24px;
+        @media (max-width: 768px) {
+            padding-top: 20px;
+        }
+        font: bold 24px "Raleway";
         letter-spacing: 2px;
         line-height: 20px;
         color: #24282f;
-        font-family: "Raleway";
-        font-weight: bold;
         text-transform: uppercase;
         padding: 120px 0 30px 0;
     }
@@ -30,21 +31,21 @@
         border-bottom: 2px solid #24282f;
         margin-bottom: 50px;
     }
-    .owl-carousel{
+    .owl-carousel {
         position: relative;
-        .owl-nav{
-            .owl-prev{
+        .owl-nav {
+            .owl-prev {
                 position: absolute;
                 top: 145px;
                 left: 0;
             }
-            .owl-next{
+            .owl-next {
                 position: absolute;
                 top: 145px;
                 left: 1106px;
             }
             .fa-angle-left:hover,
-            .fa-angle-right:hover{
+            .fa-angle-right:hover {
                 color: #24282f;
             }
         }
@@ -56,8 +57,11 @@
         flex-direction: column;
         flex-wrap: wrap;
         word-wrap: break-word;
-
         width: 100%;
+        @media (max-width: 1415px) {
+            padding: 0 5%;
+            align-self: center;
+        }
         img {
             width: 90px;
             height: 90px;
@@ -66,47 +70,27 @@
         }
         .testimotional {
             max-width: 860px;
-            font-size: 14px;
+            font: normal 14px "open sans";
             letter-spacing: 1px;
             line-height: 24px;
             color: #000;
-            font-family: "Open Sans";
             text-align: center;
             margin-bottom: 45px;
         }
         .client-name {
-            font-size: 16px;
+            font: bold 16px "open sans";
             letter-spacing: 1px;
             line-height: 24px;
             color: #b5a263;
-            font-family: "Open Sans";
-            font-weight: bold;
             text-transform: uppercase;
             ;
         }
         .client-position {
-            font-size: 14px;
+            font: normal 14px "open sans";
             letter-spacing: 1px;
             line-height: 24px;
             color: #000000;
-            font-family: "Open Sans";
             text-transform: capitalize;
         }
-    }
-}
-
-
-
-
-@media (max-width: 1415px) {
-    .review {
-        padding: 0 5%;
-        align-self: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .reviews-header{
-        padding-top: 20px;
     }
 }

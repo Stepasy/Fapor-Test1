@@ -15,11 +15,18 @@
     align-content: center;
     width: 1120px;
     flex-wrap: wrap;
+    @media (max-width: 1415px) {
+        padding: 0% 5%;
+    }
+    @media (max-width: 450px) {
+        padding: 3% 5%;
+        flex-direction: column;
+        align-items: center;
+    }
     p {
-        font-size: 12px;
+        font: normal 12px "open sans";
         letter-spacing: 1px;
         color: #6e7279;
-        font-family: "Open Sans";
     }
     .socials {
         display: flex;
@@ -37,19 +44,5 @@
         .fab:hover {
             background-color: #b5a263;
         }
-    }
-}
-
-@media (max-width: 1415px) {
-    footer {
-        padding: 0% 5%;
-    }
-}
-
-@media (max-width: 450px) {
-    footer {
-        padding: 3% 5%;
-        flex-direction: column;
-        align-items: center;
     }
 }

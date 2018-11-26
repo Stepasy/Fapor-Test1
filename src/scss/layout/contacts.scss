@@ -6,80 +6,19 @@
     min-height: 300px;
     width: 100%;
     flex-wrap: wrap;
+    padding-top: 85px;
 }
 
 .contacts {
+    @media (max-width: 768px) {
+        padding: 0 5%;
+    }
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     width: 1120px;
     flex-wrap: wrap;
-    .contact-info {
-        display: flex;
-        flex-direction: column;
-    }
-    div {
-        width: 35%;
-    }
-    &-header {
-        font-size: 14px;
-        letter-spacing: 1px;
-        line-height: 24px;
-        color: #b5a263;
-        font-family: "Open Sans";
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-top: 85px;
-    }
-    a {
-        font-size: 14px;
-        letter-spacing: 0px;
-        line-height: 24px;
-        color: #6e7279;
-        font-family: "Open Sans";
-    }
-    .subscribe {
-        display: flex;
-        flex-direction: column;
-        &-button {
-            margin: 12px 0 85px 0;
-            width: 299px;
-            height: 38px;
-            background-color: #b5a263;
-            padding: 6px 85px;
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 1px;
-            line-height: 24px;
-            color: #ffffff;
-            font-family: "Open Sans";
-            border: none;
-            &:hover {
-                background-color: #24282f;
-                transform: 0.5s;
-                color: #fff;
-            }
-        }
-        input {
-            width: 299px;
-            background-color: #2b2f35;
-            font-size: 14px;
-            letter-spacing: 0px;
-            line-height: 24px;
-            color: #6e7279;
-            font-family: "Open Sans";
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .contacts {
-        padding: 0 5%;
-    }
-}
-
-@media (max-width: 625px) {
-    .contacts {
+    @media (max-width: 625px) {
         flex-direction: column;
         align-items: center;
         &-header {
@@ -90,6 +29,67 @@
         }
         .subscribe-button {
             margin-bottom: 20px;
+        }
+    }
+    .about {
+        font: normal 14px "Open sans";
+        letter-spacing: 0px;
+        line-height: 24px;
+        color: #6e7279;
+    }
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+    }
+    div {
+        width: 35%;
+    }
+    &-header {
+        font: bold 14px "open sans";
+        letter-spacing: 1px;
+        line-height: 24px;
+        color: #b5a263;
+        text-transform: uppercase;
+    }
+    a,
+    address {
+        margin: 0;
+        padding: 0;
+        font: normal 14px "open sans";
+        letter-spacing: 0px;
+        line-height: 24px;
+        color: #6e7279;
+    }
+    a:hover {
+        color: #b5a263;
+    }
+    .subscribe {
+        display: flex;
+        flex-direction: column;
+        &-button {
+            margin: 12px 0 85px 0;
+            width: 299px;
+            height: 38px;
+            background-color: #b5a263;
+            text-transform: uppercase;
+            font: normal 14px "open sans";
+            letter-spacing: 1px;
+            line-height: 24px;
+            color: #ffffff;
+            border: none;
+            &:hover {
+                background-color: #24282f;
+                transform: 0.5s;
+                color: #fff;
+            }
+        }
+        input {
+            width: 299px;
+            background-color: #2b2f35;
+            font: normal 14px "open sans";
+            letter-spacing: 0px;
+            line-height: 24px;
+            color: #6e7279;
         }
     }
 }
