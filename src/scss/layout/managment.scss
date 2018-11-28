@@ -15,22 +15,6 @@
     flex-direction: column;
     max-width: 1120px;
     min-height: 730px;
-    @media (min-width: 741px) and (max-width: 1113px) {
-        justify-content: center;
-        align-content: center;
-        flex-wrap: nowrap;
-    }
-    @media (max-width: 760px) {
-        &-header {
-            padding-top: 80px;
-        }
-        .managers {
-            flex-direction: column;
-            img {
-                padding: 5%;
-            }
-        }
-    }
     &-header {
         font: bold 24px "Raleway";
         letter-spacing: 2px;
@@ -48,12 +32,6 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        @media (max-width: 350px) {
-            img {
-                height: auto;
-                width: 90%;
-            }
-        }
         img {
             padding: 30px;
             width: 311px;
@@ -92,6 +70,12 @@
                 background-color: #b5a263;
             }
         }
+        @media (max-width: 350px) {
+            img {
+                height: auto;
+                width: 90%;
+            }
+        }
     }
     .loader {
         border: 1px solid #24282f;
@@ -107,5 +91,21 @@
     .loader:hover {
         background-color: #24282f;
         color: #fff;
+    }
+    @media (min-width: 741px) and (max-width: 1113px) {
+        justify-content: center;
+        align-content: center;
+        flex-wrap: nowrap;
+    }
+    @media (max-width: 760px) {
+        &-header {
+            padding-top: 80px;
+        }
+        .managers {
+            flex-direction: column;
+            img {
+                padding: 5%;
+            }
+        }
     }
 }

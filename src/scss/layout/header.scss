@@ -14,25 +14,9 @@
 .header {
     display: flex;
     justify-content: space-between;
-    width: 1400px;
+    width: 100%;
+    max-width: 1400px;
     flex-wrap: wrap;
-    @media (min-width: 915px) and (max-width: 1415px) {
-        padding: 0% 5%;
-    }
-    @media (max-width: 915px) {
-        padding: 0% 5%;
-        .navbar {
-            display: none;
-        }
-        .mobile-bars {
-            display: block;
-            cursor: pointer;
-        }
-        .mobile-navbar {
-            display: flex;
-            flex-direction: column;
-        }
-    }
     a {
         color: #fff;
     }
@@ -63,5 +47,22 @@
     .mobile-bars,
     .mobile-navbar-wrapper {
         display: none;
+    }
+    @media (min-width: 915px) and (max-width: 1415px) {
+        padding: 0% 5%;
+    }
+    @media (max-width: 915px) {
+        padding: 0% 5%;
+        .navbar {
+            display: none;
+        }
+        .mobile-bars {
+            display: block;
+            cursor: pointer;
+        }
+        .mobile-navbar {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
