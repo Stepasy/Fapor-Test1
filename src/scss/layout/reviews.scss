@@ -31,24 +31,9 @@
         border-bottom: 2px solid #24282f;
         margin-bottom: 50px;
     }
-    .owl-carousel {
-        position: relative;
-        .owl-nav {
-            .owl-prev {
-                position: absolute;
-                top: 145px;
-                left: 0;
-            }
-            .owl-next {
-                position: absolute;
-                top: 145px;
-                left: 1106px;
-            }
-            .fa-angle-left:hover,
-            .fa-angle-right:hover {
-                color: #24282f;
-            }
-        }
+    &-slider {
+        width: 100%;
+        margin: 0 auto;
     }
     .review {
         display: flex;

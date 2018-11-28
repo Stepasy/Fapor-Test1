@@ -4,4 +4,4 @@
 // Feel free with using ES6 here.
 
 import './modules/mobile-menu';
-import './modules/owl';
+import './modules/slick';
