@@ -40,7 +40,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 100%;
+        width: auto;
         img {
             width: 90px;
             height: 90px;
@@ -74,6 +74,9 @@
         @media (max-width: 1415px) {
             padding: 0 2%;
             align-self: center;
+        }
+        @media (max-width: 400px){
+            padding: 0 5%;
         }
     }
 }
