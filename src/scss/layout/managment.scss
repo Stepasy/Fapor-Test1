@@ -76,6 +76,9 @@
                 width: 90%;
             }
         }
+        @media (max-width: 1113px){
+            justify-content: center;
+        }
     }
     .loader {
         border: 1px solid #24282f;
