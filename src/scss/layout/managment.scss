@@ -11,26 +11,6 @@
     flex-direction: column;
     max-width: 1120px;
     min-height: 730px;
-    @media (min-width: 741px) and (max-width: 1113px) {
-        justify-content: center;
-        align-content: center;
-        flex-wrap: nowrap;
-    }
-    @media (max-width: 760px) {
-        &-header {
-            padding-top: 80px;
-        }
-        .managers {
-            flex-direction: column;
-            img {
-                padding: 5%;
-            }
-        }
-    }
-    p {
-        margin: 0;
-        padding: 0;
-    }
     &-header {
         font: bold 24px "Raleway";
         letter-spacing: 2px;
@@ -38,6 +18,12 @@
         color: #24282f;
         text-transform: uppercase;
         padding: 160px 0 35px 0;
+        @media (max-width: 760px){
+            padding-top: 80px;
+        }
+    }
+    a{
+        text-decoration: none;
     }
     .line {
         content: '';
@@ -48,29 +34,30 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        @media (max-width: 350px) {
-            img {
-                height: auto;
-                width: 90%;
+        justify-content: space-evenly;
+        .img-holder{
+            height: 300px;
+            img{
+                height: 100%;
             }
         }
-        @media (max-width: 1113px) {
-            justify-content: center;
-        }
-        img {
-            padding: 30px;
-            width: 311px;
-            height: 300px;
-            box-sizing: content-box;
-        }
         .manager {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding-top: 30px;
+            max-width: 311px;
+            margin: 0 20px;
+            @media(max-width: 600px){
+                margin: 0;
+            }
             &-info {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 width: inherit;
-                padding: 0px 35px;
+                padding-top: 30px;
+                width: 100%;
                 &-data-name {
                     font: normal 16px "Raleway";
                     color: #232323;

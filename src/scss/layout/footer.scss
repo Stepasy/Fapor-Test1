@@ -17,10 +17,10 @@
     max-width: 1120px;
     flex-wrap: wrap;
     @media (max-width: 1415px) {
-        padding: 0% 5%;
+        padding: 0 15px;
     }
     @media (max-width: 450px) {
-        padding: 3% 5%;
+        padding: 10px 15px;
         flex-direction: column;
         align-items: center;
     }
