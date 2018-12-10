@@ -12,18 +12,6 @@ html {
 *:after {
     box-sizing: inherit;
 }
-   
-p,
-img,
-h2,
-a {
-    padding: 0;
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
-}
 
 body {
     @include font-smoothing(on);
@@ -54,7 +42,8 @@ img {
     }
 }
 
-ul, li{
+ul,
+li {
     list-style: none;
     padding: 0;
     margin: 0;

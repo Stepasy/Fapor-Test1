@@ -18,8 +18,50 @@
     width: 100%;
     max-width: 1400px;
     flex-wrap: wrap;
+    .mobile-bars {
+        display: none;
+        z-index: 2;
+    }
+    @media (min-width: 915px) and (max-width: 1415px) {
+        padding: 0% 5%;
+    }
+    @media (max-width: 915px) {
+        padding: 0% 5%;
+        .navbar-holder {
+            display: none;
+            .navbar {
+                display: flex;
+                position: absolute;
+                justify-content: center;
+                background-color: #2b2f36;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                ul {
+                    flex-direction: column;
+                    align-items: center;
+                    li {
+                        margin: 0 0 50px 0;
+                        a {
+                            padding: 0;
+                            &:hover {
+                                border-bottom: none;
+                                color: #b5a263;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mobile-bars {
+            display: block;
+            cursor: pointer;
+        }
+    }
     a {
         color: #fff;
+        text-decoration: none;
     }
     &-logo {
         font: bold 26px "Cabin";
@@ -40,13 +82,13 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        ul{
+        ul {
             display: flex;
             flex-direction: row;
-            li{
+            li {
                 margin-left: 65px;
                 a {
-                    &:hover{
+                    &:hover {
                         border-bottom: 3px solid #b5a263;
                         padding-bottom: 41px;
                         border-bottom-width: 110%;
@@ -55,46 +97,4 @@
             }
         }
     }
-    .mobile-bars {
-        display: none;
-        z-index: 2;
-    }
-    @media (min-width: 915px) and (max-width: 1415px) {
-        padding: 0% 5%;
-    }
-    @media (max-width: 915px) {
-        padding: 0% 5%;
-        .navbar-holder{
-            display: none;
-            .navbar {
-                display: flex;
-                position: absolute;
-                justify-content: center;
-                background-color: #2b2f36;
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 100vh;
-                ul{
-                    flex-direction: column;
-                    align-items: center;
-                    li{
-                        margin: 0 0 50px 0;
-                        a{
-                            padding: 0;
-                            &:hover{
-                                border-bottom: none;
-                                color: #b5a263;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .mobile-bars {
-            display: block;
-            cursor: pointer;
-        }
-    }
-        
 }
