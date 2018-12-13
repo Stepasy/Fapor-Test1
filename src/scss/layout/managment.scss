@@ -11,24 +11,25 @@
     flex-direction: column;
     max-width: 1120px;
     min-height: 730px;
+    padding: 160px 0 35px 0;
     &-header {
         font: bold 24px "Raleway";
         letter-spacing: 2px;
         line-height: 20px;
         color: #24282f;
         text-transform: uppercase;
-        padding: 160px 0 35px 0;
+        padding-bottom: 35px;
         position: relative;
         @media (max-width: 760px) {
             padding-top: 80px;
         }
         &:after {
-            padding-top: 35px;
-            position: absolute;
-            left: 30%;
             content: '';
-            width: 77px;
+            position: absolute;
             border-bottom: 2px solid #b5a263;
+            width: 77px;
+            
+            display: flex;
         }
     }
     a {
@@ -98,10 +99,10 @@
             }
         }
     }
-    .loader {
+    .btn-more {
         border: 1px solid #24282f;
         border-radius: 45px;
-        margin: 50px 0 30px 0;
+        margin-top: 50px;
         padding: 18px 45px;
         font: normal 16px "open sans";
         letter-spacing: 1px;

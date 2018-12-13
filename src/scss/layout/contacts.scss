@@ -7,6 +7,12 @@
     width: 100%;
     flex-wrap: wrap;
     padding-top: 85px;
+    font: normal 14px/24px "Open sans";
+    letter-spacing: 0px;
+    color: #6e7279;
+    @media (max-width: 1045px){
+        padding-bottom: 45px;
+    }
     @media (max-width: 625px) {
         padding-top: 5px;
     }
@@ -34,12 +40,6 @@
         div {
             width: 80%;
         }
-    }
-    .about {
-        font: normal 14px "Open sans";
-        letter-spacing: 0px;
-        line-height: 24px;
-        color: #6e7279;
     }
     .contact-info {
         display: flex;
@@ -81,7 +81,7 @@
             margin-top: 25px;
         }
         &-button {
-            margin: 12px 0 85px 0;
+            margin-top: 12px;
             width: 299px;
             height: 38px;
             background-color: #b5a263;
@@ -92,7 +92,6 @@
             color: #ffffff;
             border: none;
             @media (max-width: 625px) {
-                margin-bottom: 20px;
                 max-width: 95%;
             }
             &:hover {
