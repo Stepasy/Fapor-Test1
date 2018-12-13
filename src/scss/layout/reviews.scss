@@ -22,18 +22,22 @@
         color: #24282f;
         text-transform: uppercase;
         padding: 120px 0 30px 0;
+        position: relative;
+        margin-bottom: 50px;
         @media (max-width: 768px) {
             padding-top: 20px;
             margin: 0 15px;
             text-align: center;
             line-height: 24px;
         }
-    }
-    .line {
-        content: '';
-        width: 77px;
-        border-bottom: 2px solid #24282f;
-        margin-bottom: 50px;
+        &:after {
+            padding-top: 35px;
+            position: absolute;
+            left: 40%;
+            content: '';
+            width: 77px;
+            border-bottom: 2px solid #24282f;
+        }
     }
     &-slider {
         display: flex;
@@ -41,9 +45,9 @@
         max-width: 100%;
         margin: 0 auto;
         .fa-chevron-left,
-        .fa-chevron-right{
+        .fa-chevron-right {
             margin-top: 155px;
-            &:hover{
+            &:hover {
                 opacity: 0.5;
             }
         }
@@ -55,7 +59,7 @@
                     width: 10px;
                     border-radius: 45px;
                     background-color: #b5a263;
-                    &:before{
+                    &:before {
                         position: relative;
                         top: -10px;
                         left: -4px;
@@ -67,7 +71,6 @@
                 }
             }
         }
-
     }
     .review {
         display: flex;
@@ -84,7 +87,7 @@
         img {
             width: 90px;
             height: 90px;
-            border-radius: 45px;
+            border-radius: 50%;
             margin-bottom: 40px;
         }
         .testimotional {

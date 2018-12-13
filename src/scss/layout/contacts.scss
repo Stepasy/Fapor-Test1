@@ -7,7 +7,7 @@
     width: 100%;
     flex-wrap: wrap;
     padding-top: 85px;
-    @media (max-width: 768px) {
+    @media (max-width: 625px) {
         padding-top: 5px;
     }
 }
@@ -63,10 +63,10 @@
         line-height: 24px;
         color: #6e7279;
     }
-    p{
+    p {
         display: inline;
     }
-    .links{
+    .links {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -77,6 +77,9 @@
     .subscribe {
         display: flex;
         flex-direction: column;
+        @media (min-width: 625px) and (max-width: 1026px) {
+            margin-top: 25px;
+        }
         &-button {
             margin: 12px 0 85px 0;
             width: 299px;
@@ -88,8 +91,9 @@
             line-height: 24px;
             color: #ffffff;
             border: none;
-            @media (max-width: 625px){
+            @media (max-width: 625px) {
                 margin-bottom: 20px;
+                max-width: 95%;
             }
             &:hover {
                 opacity: 0.6;
@@ -102,6 +106,9 @@
             letter-spacing: 0px;
             line-height: 24px;
             color: #6e7279;
+            @media (max-width: 625px) {
+                max-width: 95%;
+            }
         }
     }
 }

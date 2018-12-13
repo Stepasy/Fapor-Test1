@@ -32,17 +32,19 @@
     .socials {
         display: flex;
         flex-direction: row;
-        .fab {
-            color: #6e7279;
-            width: 34px;
-            height: 34px;
-            border-radius: 17px;
-            border: 1px solid #6e7279;
-            text-align: center;
-            padding-top: 10px;
+        a {
             margin-right: 13px;
-            &:hover {
-                background-color: #b5a263;
+            .fab {
+                color: #6e7279;
+                width: 34px;
+                height: 34px;
+                border-radius: 17px;
+                border: 1px solid #6e7279;
+                text-align: center;
+                padding-top: 10px;
+                &:hover {
+                    background-color: #b5a263;
+                }
             }
         }
     }
