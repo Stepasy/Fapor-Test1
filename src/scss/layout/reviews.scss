@@ -32,9 +32,11 @@
             line-height: 24px;
         }
         &:after {
-            padding-top: 35px;
             position: absolute;
-            left: 40%;
+            top: 60px;
+            left: 0;
+            right: 0;
+            margin: auto;
             content: '';
             width: 77px;
             border-bottom: 2px solid #24282f;
@@ -54,20 +56,14 @@
         }
         .slick-dots {
             li {
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                background-color: #b5a263;
                 button {
-                    position: absolute;
-                    height: 10px;
-                    width: 10px;
-                    border-radius: 45px;
-                    background-color: #b5a263;
-                    &:before {
-                        position: relative;
-                        top: -10px;
-                        left: -4px;
-                        height: 10px;
-                        width: 10px;
-                        font-size: 24px;
-                        color: #6e7279;
+                    color: #6e7279;
+                    &:before{
+                        font-size: 12px;
                     }
                 }
             }
