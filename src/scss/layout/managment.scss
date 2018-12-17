@@ -12,6 +12,9 @@
     max-width: 1120px;
     min-height: 730px;
     padding: 160px 0 35px 0;
+    @media (max-width: 760px){
+        padding-top: 80px;
+    }
     &-header {
         font: bold 24px "Raleway";
         letter-spacing: 2px;
@@ -20,15 +23,12 @@
         text-transform: uppercase;
         padding-bottom: 35px;
         position: relative;
-        @media (max-width: 760px) {
-            padding-top: 80px;
-        }
         &:after {
+            padding-top: 45px;
             content: '';
             position: absolute;
             border-bottom: 2px solid #b5a263;
             width: 77px;
-            top: 35px;
             left: 0;
             right: 0;
             margin: auto;
@@ -47,11 +47,7 @@
         }
         .img-holder {
             height: 300px;
-            img {
-                @media(min-width: 600px) {
-                    height: 100%;
-                }
-            }
+            
         }
         .manager {
             display: flex;
