@@ -1,5 +1,5 @@
 $(document).ready(function() {
     $(".fa-bars").click(function() {
-        $(".navbar-holder").slideToggle();
+        $(".navbar-holder").slideToggle(0);
     });
 });
