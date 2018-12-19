@@ -8,14 +8,18 @@
 
 .reviews {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    max-width: 1120px;
-    min-height: 600px;
+    max-width: 1150px;
     flex-wrap: wrap;
-    padding-top: 120px;
+    padding-top: 115px;
+    @media (max-width: 768px) {
+        padding: 120px 15px 45px;
+    }
+    @media (max-width: 480px) {
+        padding-top: 45px;
+    }
     &-header {
         font: bold 24px "Raleway";
         letter-spacing: 2px;
@@ -24,14 +28,14 @@
         text-transform: uppercase;
         padding-bottom: 30px;
         position: relative;
-        margin-bottom: 50px;
+        margin-bottom: 65px;
         @media (max-width: 768px) {
-            margin: 0 15px;
+            margin: 0;
             text-align: center;
             line-height: 24px;
         }
         &:after {
-            padding-top: 40px;
+            padding-top: 48px;
             position: absolute;
             left: 0;
             right: 0;
@@ -88,30 +92,30 @@
         }
         .img-holder {
             width: 90px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             img{
                 border-radius: 50%;
             }
         }
         .testimotional {
             max-width: 860px;
-            font: normal 14px "open sans";
+            font: 14px "open sans";
             letter-spacing: 1px;
             line-height: 24px;
             color: #000;
             text-align: center;
-            margin-bottom: 45px;
+            margin-bottom: 32px;
         }
         .client-name {
-            font: bold 16px "open sans";
+            font: 500 16px "open sans";
             letter-spacing: 1px;
             line-height: 24px;
             color: #b5a263;
             text-transform: uppercase;
-            ;
+            margin-bottom: 7px;
         }
         .client-position {
-            font: normal 14px "open sans";
+            font: 14px "open sans";
             letter-spacing: 1px;
             line-height: 24px;
             color: #000000;
