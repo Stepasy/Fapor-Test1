@@ -19,12 +19,11 @@
     width: 100%;
     max-width: 1385px;
     flex-wrap: wrap;
-    font: 14px "Open Sans";      
-    @media (min-width: 915px) and (max-width: 1415px) {
+    font: 14px "Open Sans";  
+    @media (max-width: 1385px) {
         padding: 0 15px;
     }
     @media (max-width: 1020px) {
-        padding: 0 15px;
         .navbar-holder {
             display: none;
             .navbar {
@@ -67,6 +66,14 @@
         color: #fff;
         text-decoration: none;
     }
+    &-nav{
+        .menu{
+            .fas{
+                max-width: 15px;
+                max-height: 15px;
+            }
+        }
+    }
     &-logo {
         font: bold 26px "Cabin";
         letter-spacing: 2px;
@@ -74,7 +81,7 @@
         display: flex;
         z-index: 2;
         img {
-            padding-top: 5px;
+            padding-top: 4px;
         }
         &-text {
             margin-left: 30px;
@@ -91,13 +98,30 @@
             li {
                 margin-left: 63px;
                 a {
+                    position: relative;
+                    &:after{
+                        display: flex;
+                        justify-content: center;
+                        @include animate(opacity);
+                        margin-top: 35px;
+                        content: '';
+                        position: absolute;
+                        color: #b5a263;
+                        background: #b5a263;
+                        height: 2px;
+                        width: 100%;
+                        opacity: 0;
+                    }
                     &:hover {
-                        border-bottom: 3px solid #b5a263;
-                        padding-bottom: 40px;
+                        &:after{
+                        opacity: 1;
+                        }
                         @media (max-width: 1020px){
                             padding-bottom: 0;
-                            border-bottom: none;
                             color: #b5a263;
+                            &:after{
+                                opacity: 0;
+                            }
                         }
                     }
                 }

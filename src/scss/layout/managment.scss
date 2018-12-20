@@ -9,8 +9,11 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 155px 0 35px 0;
-    max-width: 1130px;
+    padding: 150px 0 35px 0;
+    max-width: 1125px;
+    @media (max-width: 1119px){
+        margin: 0 15px;
+    }
     @media (max-width: 760px){
         padding-top: 80px;
     }
@@ -22,14 +25,13 @@
     &-header {
         font: normal 24px 'Raleway';
         letter-spacing: 2px;
-        line-height: 0.833;
         color: #24282f;
         text-transform: uppercase;
-        padding-bottom: 23px;
+        padding-bottom: 18px;
         position: relative;
         z-index: -1;
         &:after {
-            padding-top: 48px;
+            padding-top: 51px;
             content: '';
             position: absolute;
             border-bottom: 2px solid #b5a263;
@@ -46,9 +48,14 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-between;
         max-width: 100%;
-        @media(max-width: 600px) {
-            padding: 0 15px;
+        @media (max-width: 1119px){
+            justify-content: center;
+        }
+        
+        @media (max-width: 744px) {
+            flex-direction: column;
         }
         .manager {
             display: flex;
@@ -57,10 +64,18 @@
             padding-top: 30px;
             max-width: 310px;
             &:nth-child(2){
-                margin: 0 84px;
-            }
-            @media(max-width: 600px) {
-                margin: 0;
+                margin-left: 80px;
+                margin-right: 80px;
+                @media (max-width: 1119px){
+                    margin-left: 160px;
+                    margin-right: 0;
+                }
+                @media (max-width: 1050px){
+                    margin-left: 80px;
+                }
+                @media (max-width: 744px) {
+                    margin: 0;
+                }
             }
             img{
                 @media (min-width: 500px){
@@ -76,6 +91,7 @@
                 justify-content: space-between;
                 align-content: center;
                 padding-top: 22px;
+                padding-left: 11px;
                 width: 100%;
                 &-data-name {
                     font: bold 16px "Raleway";
@@ -88,6 +104,8 @@
                     color: #b5a263;
                 }
                 &-socials {
+                    padding-right: 5px;
+                    padding-top: 4px;
                     display: flex;
                     flex-direction: row;
                     flex-wrap: nowrap;
@@ -101,7 +119,8 @@
                 background-color: #dedede;
                 text-align: center;
                 padding-top: 10px;
-                margin-left: 10px;
+                margin-right: 8px;
+                @include animate(background-color);
                 .sr-only{
                     visibility: hidden;
                 }
@@ -112,6 +131,8 @@
         }
     }
     .btn-more {
+        @include animate(background-color);
+        @include animate(color);
         border: 1px solid #24282f;
         border-radius: 45px;
         margin-top: 43px;

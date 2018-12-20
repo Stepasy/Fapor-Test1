@@ -15,10 +15,10 @@
     justify-content: space-between;
     align-content: center;
     width: 100%;
-    max-width: 1120px;
+    max-width: 1125px;
     flex-wrap: wrap;
-    @media (max-width: 1415px) {
-        padding: 0 15px;
+    @media (max-width: 1145px){
+        margin: 0 15px;
     }
     @media (max-width: 450px) {
         padding: 10px 15px;
@@ -29,9 +29,12 @@
         font: 12px "open sans";
         letter-spacing: 1px;
         color: #6e7279;
+        padding-top: 6px;
         a{
             color: #6e7279;
             text-decoration: none;
+            @include animate(color);
+
             &:hover{
                 color: #b5a263;
             }
@@ -40,16 +43,22 @@
     .socials {
         display: flex;
         flex-direction: row;
+        padding-bottom: 5px;
         a {
-            margin-right: 13px;
+            text-decoration: none;
             .fab {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 10px;
                 color: #6e7279;
                 width: 34px;
                 height: 34px;
                 border-radius: 17px;
                 border: 1px solid #6e7279;
                 text-align: center;
-                padding-top: 10px;
+                @include animate(background-color);
+
                 .sr-only{
                     visibility: hidden;
                 }
