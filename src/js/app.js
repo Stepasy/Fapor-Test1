@@ -5,4 +5,3 @@
 
 import './modules/mobile-menu';
 import './modules/slick';
-import './modules/validation';

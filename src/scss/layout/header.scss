@@ -1,36 +1,32 @@
 .header-wrapper {
-    align-items: center;
-    background-color: #2b2f36;
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
+    background-color: $color-dark-blue;
     width: 100%;
     min-height: 100px;
-    letter-spacing: 1px;
-    line-height: 24px;
-    color: #fff;
 }
 
 .header {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1385px;
+    max-width: 1450px;
+    margin: 0 auto;
     flex-wrap: wrap;
-    font: 14px "Open Sans";  
-    @media (max-width: 1385px) {
-        padding: 0 15px;
+    font: 14px "Open Sans";
+    padding: 35px 10px 0 54px;
+    @include media ("<widescreen"){
+        padding: 35px 15px;
     }
-    @media (max-width: 1020px) {
+    @include media ("<desktop"){
         .navbar-holder {
             display: none;
             .navbar {
                 display: flex;
                 position: absolute;
                 justify-content: center;
-                background-color: #2b2f36;
+                @include animate(opacity);
+                background-color: $color-dark-blue;
+                opacity: 0;
                 top: 0;
                 left: 0;
                 width: 100vw;
@@ -41,10 +37,9 @@
                     width: 100%;
                     li {
                         text-align: center;
-                        margin: 0;
-                        margin-top: 35px;
+                        margin: 35px 0 0 0;
                         width: 100%;
-                        a {
+                        .menu-item {
                             display: block;
                             padding: 0;
                             width: 100%;
@@ -55,14 +50,23 @@
         }
     }
     .mobile-bars {
+        @include animate(opacity);
         display: none;
         z-index: 2;
-        @media (max-width: 1020px){
+        color: $color-gold;
+        opacity: 1;
+        @include media ("<desktop"){
             display: block;
             cursor: pointer;
         }
+        &:hover{
+            opacity: 0.6;
+            @include media ("<tablet"){
+                opacity: 1;
+            }
+        }
     }
-    a {
+    .menu-item {
         color: #fff;
         text-decoration: none;
     }
@@ -80,34 +84,43 @@
         line-height: 24px;
         display: flex;
         z-index: 2;
-        img {
-            padding-top: 4px;
+        @include animate(opacity);
+        opacity: 1;
+        &:hover{
+            opacity: 0.6;
+            @include media ("<tablet"){
+                opacity: 1;
+            }
         }
-        &-text {
-            margin-left: 30px;
+        img {
+            padding: 4px 0 0;
         }
     }
     .navbar {
         display: flex;
         flex-direction: row;
         align-items: center;
+        letter-spacing: 0.8px;
+        line-height: 24px;
+        color: #fff;
+        text-transform: uppercase;
         ul {
             display: flex;
             flex-direction: row;
             @extend %listreset;
             li {
-                margin-left: 63px;
-                a {
+                margin: 0 0 0 64px;
+                .menu-item {
                     position: relative;
                     &:after{
                         display: flex;
                         justify-content: center;
                         @include animate(opacity);
-                        margin-top: 35px;
+                        margin: 35px 0 0;
                         content: '';
                         position: absolute;
-                        color: #b5a263;
-                        background: #b5a263;
+                        color: $color-gold;
+                        background: $color-gold;
                         height: 2px;
                         width: 100%;
                         opacity: 0;
@@ -116,9 +129,9 @@
                         &:after{
                         opacity: 1;
                         }
-                        @media (max-width: 1020px){
-                            padding-bottom: 0;
-                            color: #b5a263;
+                        @include media ("<desktop"){
+                            padding: 0;
+                            color: $color-gold;
                             &:after{
                                 opacity: 0;
                             }

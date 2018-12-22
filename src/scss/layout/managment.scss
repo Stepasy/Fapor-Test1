@@ -1,7 +1,4 @@
 .managment-wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     width: 100%;
 }
 
@@ -9,36 +6,38 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 150px 0 35px 0;
-    max-width: 1125px;
-    @media (max-width: 1119px){
-        margin: 0 15px;
+    justify-content: center;
+    padding: 150px 0 35px;
+    width: 100%;
+    max-width: 1185px;
+    margin: 0 auto;
+    @include media ("<desktop"){
+        padding: 150px 15px 35px;
     }
-    @media (max-width: 760px){
-        padding-top: 80px;
+    @include media ("<tablet"){
+        padding: 80px 15px 35px;
     }
-    @media (max-width: 480px){
-        padding-top: 45px;
-    }      
-    
-      
+    @include media ("<phone"){
+        padding: 45px 15px 35px;
+    }
     &-header {
         font: normal 24px 'Raleway';
-        letter-spacing: 2px;
+        letter-spacing: 0.1px;
         color: #24282f;
         text-transform: uppercase;
-        padding-bottom: 18px;
+        padding: 0 0 18px;
         position: relative;
         z-index: -1;
         &:after {
-            padding-top: 51px;
             content: '';
             position: absolute;
-            border-bottom: 2px solid #b5a263;
-            width: 77px;
             left: 0;
             right: 0;
+            width: 77px;
             margin: auto;
+            padding: 51px 0 0;
+            border-bottom: 2px solid #b5a263;
+            
         }
     }
     a {
@@ -49,36 +48,23 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        max-width: 100%;
-        @media (max-width: 1119px){
+        width: 100%;
+        @include media ("<1149px"){
             justify-content: center;
-        }
-        
-        @media (max-width: 744px) {
-            flex-direction: column;
         }
         .manager {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 30px;
+            padding: 30px 0 0;
             max-width: 310px;
-            &:nth-child(2){
-                margin-left: 80px;
-                margin-right: 80px;
-                @media (max-width: 1119px){
-                    margin-left: 160px;
-                    margin-right: 0;
-                }
-                @media (max-width: 1050px){
-                    margin-left: 80px;
-                }
-                @media (max-width: 744px) {
-                    margin: 0;
-                }
+            flex: 1 1 auto;
+            margin: 0 34px;
+            @include media ("<phone"){
+                margin: 0;
             }
             img{
-                @media (min-width: 500px){
+                @include media (">phone"){
                     height: 300px;
                 }
             }
@@ -90,22 +76,21 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-content: center;
-                padding-top: 22px;
-                padding-left: 11px;
+                padding: 22px 0 0 11px;
                 width: 100%;
                 &-data-name {
                     font: bold 16px "Raleway";
                     color: #232323;
                     text-transform: uppercase;
-                    margin-bottom: 10px;
+                    margin: 0 0 10px;
                 }
                 &-data-position {
-                    font: bold 14px "open sans";
+                    font: 400 14px "open sans";
                     color: #b5a263;
+                    letter-spacing: .1px;
                 }
                 &-socials {
-                    padding-right: 5px;
-                    padding-top: 4px;
+                    padding: 4px 5px 0 0;
                     display: flex;
                     flex-direction: row;
                     flex-wrap: nowrap;
@@ -118,8 +103,8 @@
                 border-radius: 17px;
                 background-color: #dedede;
                 text-align: center;
-                padding-top: 10px;
-                margin-right: 8px;
+                padding: 10px 0 0;
+                margin: 0 8px 0 0;
                 @include animate(background-color);
                 .sr-only{
                     visibility: hidden;
@@ -135,7 +120,7 @@
         @include animate(color);
         border: 1px solid #24282f;
         border-radius: 45px;
-        margin-top: 43px;
+        margin: 43px 0 0;
         padding: 12px 37px;
         font: 16px "open sans";
         letter-spacing: 1px;

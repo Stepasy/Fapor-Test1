@@ -6,20 +6,17 @@
     background-color: #f7f7f7;
 }
 
+
 .reviews {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100vw;
-    max-width: 1125px;
+    width: 100%;
+    max-width: 1155px;
     flex-wrap: wrap;
-    padding-top: 115px;
-    padding-bottom: 96px;
-    @media (max-width: 768px) {
-        padding: 120px 15px 45px;
-    }
-    @media (max-width: 480px) {
-        padding-top: 45px;
+    padding: 115px 15px 96px;
+    @include media ("<tablet"){
+        padding: 45px 15px 45px;
     }
     &-header {
         font: 24px "Raleway";
@@ -27,16 +24,14 @@
         line-height: 20px;
         color: #24282f;
         text-transform: uppercase;
-        padding-bottom: 30px;
+        padding: 0 0 30px;
         position: relative;
-        margin-bottom: 65px;
-        @media (max-width: 768px) {
-            margin: 0;
+        margin: 0 0 65px;
+        @include media ("<phone"){
             text-align: center;
-            line-height: 24px;
         }
         &:after {
-            padding-top: 48px;
+            padding: 48px 0 0;
             position: absolute;
             left: 0;
             right: 0;
@@ -53,13 +48,13 @@
         margin: 0 auto;
         .fa-chevron-left,
         .fa-chevron-right {
-            margin-top: 59px;
+            margin: 59px 0 0;
             &:hover {
                 opacity: 0.5;
             }
         }
         .slick-dots {
-            margin-top: 16px;
+            margin: 16px 0 0;
             position: absolute;
             bottom: -25px;
             list-style: none;
@@ -126,24 +121,22 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        @media (max-width: 1415px) {
-            align-self: center;
-        }
+        
         .img-holder {
             width: 90px;
-            margin-bottom: 30px;
+            margin: 0 0 28px;
             img{
                 border-radius: 50%;
             }
         }
         .testimotional {
-            max-width: 860px;
+            max-width: 863px;
             font: 14px "open sans";
-            letter-spacing: 1px;
+            letter-spacing: .3px;
             line-height: 24px;
             color: #000;
             text-align: center;
-            margin-bottom: 32px;
+            margin: 0 0 34px;
         }
         .client-name {
             font: 500 16px "open sans";
@@ -151,11 +144,11 @@
             line-height: 24px;
             color: #b5a263;
             text-transform: uppercase;
-            margin-bottom: 7px;
+            margin: 0 0 6px;
         }
         .client-position {
             font: 14px "open sans";
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
             line-height: 24px;
             color: #000000;
             text-transform: capitalize;

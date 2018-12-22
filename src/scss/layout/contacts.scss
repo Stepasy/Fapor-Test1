@@ -1,72 +1,70 @@
 .contacts-wrapper {
-    background-color: #2b2f35;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    background-color: $color-dark-blue;
     min-height: 300px;
     width: 100%;
-    flex-wrap: wrap;
-    padding-top: 71px;
+    margin: 0 auto;
     font: 14px/24px "Open sans";
     letter-spacing: 0;
     color: #6e7279;
-    @media (max-width: 1045px){
-        padding-bottom: 45px;
-    }
-    @media (max-width: 625px) {
-        padding-top: 5px;
-        padding-bottom: 25px;
-    }
 }
 
 .contacts {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    width: 1125px;
+    max-width: 1185px;
+    padding: 75px 31px 0 16px;
+    width: 100%;
+    margin: 0 auto;    
     flex-wrap: wrap;
-    @media (max-width: 1145px){
-        margin: 0 15px;
+    @include media ("<desktop"){
+        justify-content: center;
+        padding: 35px 0;
     }
-    @media (max-width: 831px){
-        justify-content: space-around;
-    }
-    @media (max-width: 625px){
+    @include media ("<tablet"){
         flex-direction: column;
-        align-items: flex-start;
-        &-header {
-            margin-top: 20px;
-        }
+        justify-content: flex-start;
     }
-    .contacts-block {
-        max-width: 300px;
-        @media (max-width: 625px){
-            max-width: 100%;
+    @include media ("<phone"){
+        justify-content: flex-start;
+        padding: 0 0 35px;
+    }
+    .contacts-block{
+        max-width: 313px;
+        flex: 1 1 auto;
+        padding: 0 15px;
+        @include media ("<desktop"){
+            padding: 35px 15px 0;
+        }
+        @include media ("<tablet"){
+            max-width: 100vw;
+            width: 100%;
         }
     }
     .contact-info {
         display: flex;
         flex-direction: column;
+        
     }
     &-header {
         font: 600 14px "open sans";
-        letter-spacing: 1px;
+        letter-spacing: 0.7px;
         line-height: 24px;
         color: #b5a263;
         text-transform: uppercase;
-        margin-bottom: 16px;
+        margin: 0 0 16px;
     }
     a,
     address,
     p {
         text-decoration: none;
-        margin: 0;
-        padding: 0;
         font: 14px "open sans";
-        letter-spacing: 0;
         line-height: 24px;
         color: #6e7279;
         @include animate(color);
+    }
+    address{
+        padding: 0 0 13px;
     }
     p {
         display: inline;
@@ -80,15 +78,16 @@
         }
     }
     
+      
     .subscribe {
+        .contacts-header{
+            margin: 0 0 18px;
+        }
         display: flex;
         flex-direction: column;
-        @media (max-width: 625px) {
-            width: 100%;      
-        }
         &-button {
             @include animate(opacity);
-            margin-top: 12px;
+            margin: 12px 0 0;
             max-width: 300px;
             height: 38px;
             background-color: #b5a263;
@@ -98,8 +97,8 @@
             line-height: 24px;
             color: #ffffff;
             border: none;
-            @media (max-width: 625px) {
-                max-width: 100%;      
+            @include media ("<tablet"){
+                max-width: 100vw;
             }
             &:hover {
                 opacity: 0.6;
@@ -112,8 +111,8 @@
             letter-spacing: 0;
             line-height: 24px;
             color: #6e7279;
-            @media (max-width: 625px) {
-                max-width: 100%;
+            @include media ("<tablet"){
+                max-width: 100vw;
             }
         }
     }
